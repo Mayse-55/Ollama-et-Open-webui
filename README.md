@@ -104,7 +104,12 @@ sudo systemctl restart ollama.service
 ```bash
 http://ip-serveur:3000
 ```
+
+![Capture d'écran 2025-05-13 203520](https://github.com/user-attachments/assets/d2587bdb-47ac-4581-b1c5-dcf620340d5e)
+
 **Sur le serveur :**
 ```bash
 sudo nvtop
 ```
+![image](https://github.com/user-attachments/assets/d42723a0-5a2e-4f63-b06e-e8aa73d84c22)
+
