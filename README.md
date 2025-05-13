@@ -40,13 +40,12 @@ sudo apt-get install -y nvidia-container-toolkit
 ```bash
 sudo curl -fsSL https://ollama.com/install.sh | sh
 ```
+![Capture d'écran 2025-05-13 182238](https://github.com/user-attachments/assets/4b5092e7-d30b-4dcf-90ce-4f1a2c371886)
 ```bash
 sudo reboot
 ```
-
-![Capture d'écran 2025-05-13 181942](https://github.com/user-attachments/assets/f5f502e7-9ab3-42c1-96ef-7e001a2611bc)
-
 **⚠️ Attention si a la fin il y a « WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode. » la carte graphique n’est pas détecter**
+![Capture d'écran 2025-05-13 181942](https://github.com/user-attachments/assets/f5f502e7-9ab3-42c1-96ef-7e001a2611bc)
 
 **7. Installer monitoring nvidia « nvtop »**
 ```bash
@@ -61,6 +60,8 @@ sudo nvtop
 ```bash
 sudo ollama run mistral
 ```
+![Capture d'écran 2025-05-13 181838](https://github.com/user-attachments/assets/56b60ba3-6aea-4342-88d8-db396e0fd454)
+
 **2 - Deuxième parti installation d’Open-webui :**
 
 **1. Mettre a jour les dépôt**
