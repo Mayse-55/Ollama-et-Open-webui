@@ -127,7 +127,7 @@ sudo nvtop
 
 **3 - Mises à jour :**
 
-![Capture d'écran 2025-05-13 232615](https://github.com/user-attachments/assets/82b8df5c-4249-4e53-9648-ebe71bbb8ecc)
+![Capture d'écran 2025-05-13 232655](https://github.com/user-attachments/assets/6bc19cbc-99e4-4cd3-8987-1b27a2cddc90)
 
 **1. Arrêter et supprimer l’ancien conteneur (pas le volume)**
 ```bash
