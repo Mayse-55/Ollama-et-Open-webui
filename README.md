@@ -72,7 +72,7 @@ sudo apt install docker docker-compose
 ```bash
 sudo docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda
 ```
-**⚠️ Attention ceci peut prendre beaucoup de temp**
+**⚠️ Attention ceci peut prendre beaucoup de temps**
 
 **4. Configurer Systemd**
 ```bash
