@@ -127,6 +127,8 @@ sudo nvtop
 
 **3 - Mises à jour :**
 
+![Capture d'écran 2025-05-13 232615](https://github.com/user-attachments/assets/82b8df5c-4249-4e53-9648-ebe71bbb8ecc)
+
 **1. Arrêter et supprimer l’ancien conteneur (pas le volume)**
 ```bash
 sudo docker stop open-webui
