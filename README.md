@@ -98,7 +98,7 @@ sudo systemctl deamon-reload
 sudo systemctl enable ollama.service
 ```
 ```bash
-sudo systemctl start ollama.service
+sudo systemctl restart ollama.service
 ```
 **6. Tester OLLAMA**
 ```bash
