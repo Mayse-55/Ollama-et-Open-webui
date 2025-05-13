@@ -117,3 +117,28 @@ sudo nvtop
 
 ![demo](https://github.com/user-attachments/assets/b774f670-126f-4b1d-954d-a550e9b60d41)
 
+-------------------------------------------------------------
+
+**3 - Mises à jour :**
+
+**1. Arrêter et supprimer l’ancien conteneur (pas le volume)**
+```bash
+sudo docker stop open-webui
+```
+```bash
+sudo docker rm open-webui
+```
+**2. Mettre à jour l’image**
+```bash
+sudo docker pull ghcr.io/open-webui/open-webui:cuda
+```
+**3. Relancer avec la même commande**
+```bash
+sudo docker run -d -p 3000:8080 \
+  --gpus all \
+  --add-host=host.docker.internal:host-gateway \
+  -v open-webui:/app/backend/data \
+  --name open-webui \
+  --restart always \
+  ghcr.io/open-webui/open-webui:cuda
+```
