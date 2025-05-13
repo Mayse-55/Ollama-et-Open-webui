@@ -43,6 +43,9 @@ sudo curl -fsSL https://ollama.com/install.sh | sh
 ```bash
 sudo reboot
 ```
+
+![Capture d'écran 2025-05-13 181942](https://github.com/user-attachments/assets/f5f502e7-9ab3-42c1-96ef-7e001a2611bc)
+
 **⚠️ Attention si a la fin il y a « WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode. » la carte graphique n’est pas détecter**
 
 **7. Installer monitoring nvidia « nvtop »**
