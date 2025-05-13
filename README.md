@@ -100,11 +100,7 @@ sudo systemctl enable ollama.service
 ```bash
 sudo systemctl restart ollama.service
 ```
-**6. Tester OLLAMA**
-```bash
-sudo ollama run mistral 
-```
-**7. Accéder a l’interface web open-webui + monitoring nvtop**
+**6. Accéder a l’interface web open-webui + monitoring nvtop**
 ```bash
 http://ip-serveur:3000
 ```
