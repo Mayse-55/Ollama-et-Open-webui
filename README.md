@@ -113,3 +113,4 @@ sudo nvtop
 ```
 ![Capture d'écran 2025-05-13 203645](https://github.com/user-attachments/assets/e28de005-f8d2-494e-921e-93bd68a61ccb)
 
+**⚠️ Pour ajouter des LLM sur Open-webui comme (deepseek, ect...) il faut faire sur le serveur cette commande ollama run (nom du llm)**
