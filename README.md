@@ -111,5 +111,5 @@ http://ip-serveur:3000
 ```bash
 sudo nvtop
 ```
-![image](https://github.com/user-attachments/assets/d42723a0-5a2e-4f63-b06e-e8aa73d84c22)
+![Capture d'écran 2025-05-13 203645](https://github.com/user-attachments/assets/e28de005-f8d2-494e-921e-93bd68a61ccb)
 
