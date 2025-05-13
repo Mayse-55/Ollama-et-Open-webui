@@ -1,3 +1,7 @@
+Installation LLM : OLLAMA + OPENWEB UI 
+
+Guide d'installation complet :
+
 Préqueris :
 
 - Distribution Debian ou Ubuntu à jour 
