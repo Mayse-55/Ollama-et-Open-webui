@@ -113,6 +113,7 @@ sudo nvtop
 ```
 ![Capture d'écran 2025-05-13 203645](https://github.com/user-attachments/assets/e28de005-f8d2-494e-921e-93bd68a61ccb)
 
-**7. Pour ajouter des LLM **
+**7. Pour ajouter des LLM**
+
 ![demo](https://github.com/user-attachments/assets/b774f670-126f-4b1d-954d-a550e9b60d41)
 
