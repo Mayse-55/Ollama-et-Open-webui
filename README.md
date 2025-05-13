@@ -1,26 +1,26 @@
-Installation LLM : OLLAMA + OPENWEB UI 
+**Installation LLM : OLLAMA + OPENWEB UI **
 
-Guide d'installation complet :
+**Guide d'installation complet :**
 
-Préqueris :
+**Préqueris :**
 
 - Distribution Debian ou Ubuntu à jour 
 - Carte graphique NVIDIA + pilotes propriétaires déjà installés 
 - Accès administrateur (sudo) 
 - Accès SSH au serveur via openssh ou autre « facultatif »
 
-1. Mettre à jour le système
+**1. Mettre à jour le système**
 ```bash
 sudo apt update 
 ```
 ```bash 
 sudo apt dist-upgrade -y 
 ```
-2. Installer les outils de base
+**2. Installer les outils de base**
 ```bash
 sudo apt install -y curl gpg ; apt update
 ```
-3. Ajouter le dépôt NVIDIA Container Toolkit
+**3. Ajouter le dépôt NVIDIA Container Toolkit**
 ```bash
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```
