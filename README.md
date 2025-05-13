@@ -83,12 +83,12 @@ sudo docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-
 ```bash
 sudo nano /etc/systemd/system/ollama.service
 ```
-**Ajouter ceci et Enregistrer : **
+**Ajouter ceci et Enregistrer :**
 ```bash
 Environment="PATH=$PATH"
 Environment="OLLAMA_HOST=0.0.0.0"
 ```
-**5. Lancer Ollama **
+**5. Lancer Ollama**
 ```bash
 sudo systemctl deamon-reload
 ```
