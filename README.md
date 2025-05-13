@@ -13,7 +13,9 @@ Préqueris :
 ```bash
 sudo apt update 
 ```
-```sudo apt dist-upgrade -y ```
+```bash 
+sudo apt dist-upgrade -y 
+```
 
 2. Installer les outils de base
 # sudo apt install -y curl gpg ; apt update
