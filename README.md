@@ -10,8 +10,8 @@ Préqueris :
 - Accès SSH au serveur via openssh ou autre « facultatif »
 
 1. Mettre à jour le système
-# sudo apt update 
-# sudo apt dist-upgrade -y 
+```sudo apt update ```
+```sudo apt dist-upgrade -y ```
 
 2. Installer les outils de base
 # sudo apt install -y curl gpg ; apt update
