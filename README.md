@@ -77,7 +77,13 @@ sudo apt install docker docker-compose
 ```
 **3. Installer Open-webui dans docker**
 ```bash
-sudo docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda
+sudo docker run -d -p 3000:8080 \
+  --gpus all \
+  --add-host=host.docker.internal:host-gateway \
+  -v open-webui:/app/backend/data \
+  --name open-webui \
+  --restart always \
+  ghcr.io/open-webui/open-webui:cuda
 ```
 **⚠️ Attention ceci peut prendre beaucoup de temps**
 
