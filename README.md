@@ -1,4 +1,4 @@
-**Installation LLM : OLLAMA + OPENWEB UI **
+**Installation LLM : OLLAMA + OPENWEB UI**
 
 **Guide d'installation complet :**
 
@@ -24,24 +24,28 @@ sudo apt install -y curl gpg ; apt update
 ```bash
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```
-4.  Ajouter la source logicielle
+**4.  Ajouter la source logicielle**
 ```bash
 sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```
-5. Mettre a jour les dépôt
-# apt update 
-
-6. Installer NVIDIA Container toolkit
-# apt-get install -y nvidia-container-toolkit
-
-8. Installer OLLAMA
-# curl -fsSL https://ollama.com/install.sh | sh
-
+**5. Mettre a jour les dépôt**
+```bash
+apt update 
+```
+**6. Installer NVIDIA Container toolkit**
+```bash
+apt-get install -y nvidia-container-toolkit
+```
+**8. Installer OLLAMA**
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+```bash
 # reboot
+```
+**⚠️ Par contre si a la fin il y a « WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode. » la carte graphique n’est pas détecter a vous de régler se problème**
 
-⚠️ Par contre si a la fin il y a « WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode. » la carte graphique n’est pas détecter a vous de régler se problème
-
-7. Installer monitoring nvidia « nvtop »
+**7. Installer monitoring nvidia « nvtop »**
 # apt install nvtop 
 # nvtop
 
