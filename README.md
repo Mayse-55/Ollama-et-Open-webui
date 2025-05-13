@@ -63,6 +63,8 @@ sudo ollama run mistral
 ```
 ![Capture d'écran 2025-05-13 181838](https://github.com/user-attachments/assets/56b60ba3-6aea-4342-88d8-db396e0fd454)
 
+-------------------------------------------------------------
+
 **2 - Deuxième parti installation d’Open-webui :**
 
 **1. Mettre a jour les dépôt**
