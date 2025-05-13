@@ -65,7 +65,7 @@ sudo ollama run mistral
 
 -------------------------------------------------------------
 
-**__2 - Deuxième parti installation d’Open-webui :__**
+**2 - Deuxième parti installation d’Open-webui :**
 
 **1. Mettre a jour les dépôt**
 ```bash
