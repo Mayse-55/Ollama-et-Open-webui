@@ -22,61 +22,61 @@ sudo apt install -y curl gpg ; apt update
 ```
 **3. Ajouter le dépôt NVIDIA Container Toolkit**
 ```bash
-curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+sudo curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```
 **4.  Ajouter la source logicielle**
 ```bash
-sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
+sudo sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```
 **5. Mettre a jour les dépôt**
 ```bash
-apt update 
+sudo apt update 
 ```
 **6. Installer NVIDIA Container toolkit**
 ```bash
-apt-get install -y nvidia-container-toolkit
+sudo apt-get install -y nvidia-container-toolkit
 ```
 **8. Installer OLLAMA**
 ```bash
-curl -fsSL https://ollama.com/install.sh | sh
+sudo curl -fsSL https://ollama.com/install.sh | sh
 ```
 ```bash
-reboot
+sudo reboot
 ```
 **⚠️ Par contre si a la fin il y a « WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode. » la carte graphique n’est pas détecter a vous de régler se problème**
 
 **7. Installer monitoring nvidia « nvtop »**
 ```bash
-apt install nvtop 
+sudo apt install nvtop 
 ```
 ```bash
-nvtop
+sudo nvtop
 ```
 **Nvtop permet de visionner l’utilisation du GPU**
 
 **9. Tester OLLAMA**
 ```bash
-ollama run mistral
+sudo ollama run mistral
 ```
 **2 - Deuxième parti installation d’Open-webui :**
 
 **1. Mettre a jour les dépôt**
 ```bash
-apt update
+sudo apt update
 ```
 **2. Installer docker docker-compose**
 ```bash 
-apt install docker docker-compose
+sudo apt install docker docker-compose
 ```
 **3. Installer Open-webui dans docker**
 ```bash
-docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda
+sudo docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda
 ```
 **⚠️ Attention ceci peut prendre beaucoup de temp**
 
 **4. Configurer Systemd**
 ```bash
-nano /etc/systemd/system/ollama.service
+sudo nano /etc/systemd/system/ollama.service
 ```
 **Ajouter ceci et Enregistrer : **
 ```bash
@@ -85,17 +85,17 @@ Environment="OLLAMA_HOST=0.0.0.0"
 ```
 **5. Lancer Ollama **
 ```bash
-# systemctl deamon-reload
+sudo systemctl deamon-reload
 ```
 ```bash
-# systemctl enable ollama.service
+sudo systemctl enable ollama.service
 ```
 ```bash
-# systemctl start ollama.service
+sudo systemctl start ollama.service
 ```
 **6. Tester OLLAMA**
 ```bash
-# ollama run mistral 
+sudo ollama run mistral 
 ```
 **7. Accéder a l’interface web open-webui + monitoring nvtop**
 ```bash
@@ -103,7 +103,7 @@ http://ip-serveur:3000
 ```
 **Sur le serveur :**
 ```bash
-nvtop
+sudo nvtop
 ```
 
 
