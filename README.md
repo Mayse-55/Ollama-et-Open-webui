@@ -43,56 +43,70 @@ curl -fsSL https://ollama.com/install.sh | sh
 ```bash
 reboot
 ```
-
 **⚠️ Par contre si a la fin il y a « WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode. » la carte graphique n’est pas détecter a vous de régler se problème**
 
-
 **7. Installer monitoring nvidia « nvtop »**
-# apt install nvtop 
-# nvtop
+```bash
+apt install nvtop 
+```
+```bash
+nvtop
+```
+**Nvtop permet de visionner l’utilisation du GPU**
 
-Nvtop permet de visionner l’utilisation du GPU
+**9. Tester OLLAMA**
+```bash
+ollama run mistral
+```
+**2 - Deuxième parti installation d’Open-webui :**
 
-9. Tester OLLAMA 
-# ollama run mistral
+**1. Mettre a jour les dépôt**
+```bash
+apt update
+```
+**2. Installer docker docker-compose**
+```bash 
+apt install docker docker-compose
+```
+**3. Installer Open-webui dans docker**
+```bash
+docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda
+```
+**⚠️ Attention ceci peut prendre beaucoup de temp**
 
-Deuxième parti installation d’Open-webui :
-
-1. Mettre a jour les dépôt
-# apt update
-
-2. Installer docker docker-compose
-# apt install docker docker-compose
-
-3. Installer Open-webui dans docker
-# docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:cuda
-
-⚠️ Attention ceci peut prendre beaucoup de temp
-
-4. Configurer Systemd 
-# nano /etc/systemd/system/ollama.service
-
-Ajouter ceci et Enregistrer : 
-
+**4. Configurer Systemd**
+```bash
+nano /etc/systemd/system/ollama.service
+```
+**Ajouter ceci et Enregistrer : **
+```bash
 Environment="PATH=$PATH"
 Environment="OLLAMA_HOST=0.0.0.0"
-
-5. Lancer Ollama 
+```
+**5. Lancer Ollama **
+```bash
 # systemctl deamon-reload
+```
+```bash
 # systemctl enable ollama.service
+```
+```bash
 # systemctl start ollama.service
-
-6. Tester OLLAMA 
+```
+**6. Tester OLLAMA**
+```bash
 # ollama run mistral 
-
-7. Accéder a l’interface web open-webui + monitoring nvtop 
+```
+**7. Accéder a l’interface web open-webui + monitoring nvtop**
+```bash
 http://ip-serveur:3000
+```
+**Sur le serveur :**
+```bash
+nvtop
+```
 
-Sur le serveur :
-# nvtop
 
 
 
-
-
-Documentation effectué par Nathaël Polnecq
+Documentation effectué par Mayse
