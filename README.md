@@ -44,7 +44,8 @@ curl -fsSL https://ollama.com/install.sh | sh
 reboot
 ```
 
-⚠️ Par contre si a la fin il y a « WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode. » la carte graphique n’est pas détecter a vous de régler se problème
+**⚠️ Par contre si a la fin il y a « WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode. » la carte graphique n’est pas détecter a vous de régler se problème**
+
 
 **7. Installer monitoring nvidia « nvtop »**
 # apt install nvtop 
