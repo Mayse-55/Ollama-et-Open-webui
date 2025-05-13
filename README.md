@@ -105,8 +105,3 @@ http://ip-serveur:3000
 ```bash
 sudo nvtop
 ```
-
-
-
-
-Documentation effectué par Mayse
