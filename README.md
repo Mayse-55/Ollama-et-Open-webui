@@ -33,7 +33,7 @@ sudo sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container
 sudo apt update 
 ```
 **6 - Corriger les dépôts APT en double**
-**Il se peut qu'au début, lors de l'ajout des dépôts NVIDIA, vous ayez en fesant** ```apt update``` **ces avertissements :** ```W: La cible Translations ...```
+**⚠️ - Attention il se peut qu'au début, lors de l'ajout des dépôts NVIDIA, vous ayez en fesant** ```apt update``` **ces avertissements :** ```W: La cible Translations ...```
 
 ![Capture d'écran 2025-05-14 081324](https://github.com/user-attachments/assets/6ce65a9a-12b6-4481-9f1b-2729891c0479)
 **a - Supprimez le fichier en double.** 
@@ -44,7 +44,7 @@ sudo rm /etc/apt/sources.list.d/contrib.list
 ```bash
 apt update
 ```
-**Si vous n'avez plus d'avertissements, le problème est résolu.**
+**📌 - Si vous n'avez plus d'avertissements, le problème est résolu.**
 
 **7 - Installer NVIDIA Container toolkit**
 ```bash
