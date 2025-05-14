@@ -127,7 +127,7 @@ http://ip-serveur:3000
 
 ![Capture d'écran 2025-05-13 203520](https://github.com/user-attachments/assets/d2587bdb-47ac-4581-b1c5-dcf620340d5e)
 
-**Sur le serveur :**
+**Lancer nvtop sur le serveur :**
 ```bash
 sudo nvtop
 ```
