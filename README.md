@@ -24,7 +24,7 @@ sudo apt install -y curl gpg ; apt update
 ```bash
 sudo curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```
-**4.  Ajouter la source logicielle**
+**4. Ajouter la source logicielle**
 ```bash
 sudo sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```
@@ -36,15 +36,16 @@ sudo apt update
 **Il se peut qu'au début, lors de l'ajout des dépôts NVIDIA, vous ayez en fesant** ```apt update``` **ces avertissements :** ```W: La cible Translations ...```
 
 ![Capture d'écran 2025-05-14 081324](https://github.com/user-attachments/assets/6ce65a9a-12b6-4481-9f1b-2729891c0479)
-**a. Supprimer le fichier en double** 
+**a. Supprimez le fichier en double.** 
 ```bash
 sudo rm /etc/apt/sources.list.d/contrib.list
 ```
-**b. Regarder si les Warnings sont toujours présent**
+**b. Vérifiez si les avertissements sont toujours présents.**
 ```bash
 apt update
 ```
-**Si vous n'avez plus de Warnings le probléme est résolu**
+**Si vous n'avez plus d'avertissements, le problème est résolu.**
+
 **7. Installer NVIDIA Container toolkit**
 ```bash
 sudo apt-get install -y nvidia-container-toolkit
