@@ -34,6 +34,7 @@ sudo apt update
 ```
 **6. Corriger les dépôts APT en double**
 **Il se peut qu'au début, lors de l'ajout des dépôts NVIDIA, vous ayez en fesant** ```apt update``` **ces avertissements :** ```W: La cible Translations ...```
+
 ![Capture d'écran 2025-05-14 081324](https://github.com/user-attachments/assets/6ce65a9a-12b6-4481-9f1b-2729891c0479)
 **a. Supprimer le fichier en double** 
 ```bash
