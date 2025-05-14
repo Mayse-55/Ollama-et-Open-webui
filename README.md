@@ -1,4 +1,4 @@
-**Installation LLM : OLLAMA + OPENWEB UI**
+**Installation LLM : OLLAMA + Open-webui**
 
 **Guide d'installation complet :**
 
