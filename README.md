@@ -1,8 +1,8 @@
 **Installation LLM : OLLAMA + Open-webui**
 
-**Guide d'installation complet :**
+**📄​ - Guide d'installation complet :**
 
-**Préqueris :**
+**​📦 - Préqueris :**
 
 - Distribution Debian ou Ubuntu à jour 
 - Carte graphique NVIDIA + pilotes propriétaires déjà installés 
