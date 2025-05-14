@@ -44,6 +44,7 @@ sudo rm /etc/apt/sources.list.d/contrib.list
 ```bash
 apt update
 ```
+**Si vous n'avez plus de Warnings le probléme est résolu**
 **7. Installer NVIDIA Container toolkit**
 ```bash
 sudo apt-get install -y nvidia-container-toolkit
