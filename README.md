@@ -164,15 +164,3 @@ sudo docker run -d -p 3000:8080 \
   --restart always \
   ghcr.io/open-webui/open-webui:cuda
 ```
--------------------------------------------------------------
-**4 - Corriger les dépôts APT en double**
-**Il se peut qu'au début, lors de l'ajout des dépôts NVIDIA, vous ayez en fesant** ```apt update``` **ces avertissements :** ```W: La cible Translations ...```
-![Capture d'écran 2025-05-14 081324](https://github.com/user-attachments/assets/6ce65a9a-12b6-4481-9f1b-2729891c0479)
-**1. Supprimer le fichier en double** 
-```bash
-sudo rm /etc/apt/sources.list.d/contrib.list
-```
-**2. Regarder si les Warnings sont toujours présent**
-```bash
-apt update
-```
