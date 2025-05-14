@@ -32,7 +32,18 @@ sudo sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container
 ```bash
 sudo apt update 
 ```
-**6. Installer NVIDIA Container toolkit**
+**6. Corriger les dépôts APT en double**
+**Il se peut qu'au début, lors de l'ajout des dépôts NVIDIA, vous ayez en fesant** ```apt update``` **ces avertissements :** ```W: La cible Translations ...```
+![Capture d'écran 2025-05-14 081324](https://github.com/user-attachments/assets/6ce65a9a-12b6-4481-9f1b-2729891c0479)
+**a. Supprimer le fichier en double** 
+```bash
+sudo rm /etc/apt/sources.list.d/contrib.list
+```
+**b. Regarder si les Warnings sont toujours présent**
+```bash
+apt update
+```
+**7. Installer NVIDIA Container toolkit**
 ```bash
 sudo apt-get install -y nvidia-container-toolkit
 ```
@@ -48,7 +59,7 @@ sudo reboot
 
 ![Capture d'écran 2025-05-13 181942](https://github.com/user-attachments/assets/f5f502e7-9ab3-42c1-96ef-7e001a2611bc)
 
-**7. Installer monitoring nvidia « nvtop »**
+**9. Installer monitoring nvidia « nvtop »**
 ```bash
 sudo apt install nvtop 
 ```
@@ -57,7 +68,7 @@ sudo nvtop
 ```
 **Nvtop permet de visionner l’utilisation du GPU**
 
-**9. Tester OLLAMA**
+**10. Tester OLLAMA**
 ```bash
 sudo ollama run mistral
 ```
@@ -151,8 +162,8 @@ sudo docker run -d -p 3000:8080 \
   ghcr.io/open-webui/open-webui:cuda
 ```
 -------------------------------------------------------------
-**4 - Corriger les dépôts APT en double
-**Il se peut qu'au début, lors de l'ajout des dépôts NVIDIA, vous ayez en fesant ```apt update``` ces avertissements : ```W: La cible Translations ...```.**
+**4 - Corriger les dépôts APT en double**
+**Il se peut qu'au début, lors de l'ajout des dépôts NVIDIA, vous ayez en fesant** ```apt update``` **ces avertissements :** ```W: La cible Translations ...```
 ![Capture d'écran 2025-05-14 081324](https://github.com/user-attachments/assets/6ce65a9a-12b6-4481-9f1b-2729891c0479)
 **1. Supprimer le fichier en double** 
 ```bash
