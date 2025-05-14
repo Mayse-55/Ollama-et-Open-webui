@@ -71,7 +71,7 @@ sudo apt install nvtop
 ```bash
 sudo nvtop
 ```
-**Nvtop permet de visionner l’utilisation du GPU**
+**📌 - Nvtop permet de visionner l’utilisation du GPU**
 
 **10 - Tester OLLAMA**
 ```bash
