@@ -182,7 +182,3 @@ sudo docker run -d -p 3000:8080 \
   --restart always \
   ghcr.io/open-webui/open-webui:cuda
 ```
-
----
-
-📁 **Ce guide est prêt à être utilisé comme README pour GitHub !**
