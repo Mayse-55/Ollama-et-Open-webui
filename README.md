@@ -152,7 +152,7 @@ sudo nvtop
 
 ### 7️⃣ Ajouter des modèles dans Open-WebUI
 
-Utilisez l'interface Web pour ajouter vos modèles.
+![demo](https://github.com/user-attachments/assets/14220a3a-0ee0-4892-a604-4e4b4d97c347)
 
 ---
 
