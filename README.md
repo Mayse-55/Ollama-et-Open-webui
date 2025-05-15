@@ -73,7 +73,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 sudo reboot
 ```
 
-⚠️ Si vous voyez `WARNING: No NVIDIA/AMD GPU detected`, la carte graphique n’est pas détectée.
+​🚫​ Si vous voyez `WARNING: No NVIDIA/AMD GPU detected`, la carte graphique n’est pas détectée.
 
 ### 9️⃣ Installer le moniteur GPU (nvtop)
 
