@@ -9,7 +9,7 @@
 
 > [!caution]
 > ✅ Cette documentation a été **testée et validée** dans un environnement conforme aux prérequis.  
-> ⚠️​ Si vous rencontrez des **problèmes**, il est probable que cela provienne **de votre configuration**.
+> ❌​​​ Si vous rencontrez des **problèmes**, il est probable que cela provienne **de votre configuration**.
 ---
 
 ## ⚙️ Installation de Ollama
