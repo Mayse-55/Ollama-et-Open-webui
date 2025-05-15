@@ -115,7 +115,7 @@ sudo docker run -d -p 3000:8080 \
   ghcr.io/open-webui/open-webui:cuda
 ```
 
-⚠️ Cela peut prendre un certain temps
+🐢 Cela peut prendre un certain temps
 
 ### 4️⃣ Configurer systemd pour Ollama
 
