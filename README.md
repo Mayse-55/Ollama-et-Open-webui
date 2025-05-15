@@ -184,7 +184,9 @@ sudo docker run -d -p 3000:8080 \
 ```
 ---
 
-> ⚠️ **Attention**  
-> Cette documentation a été testée et fonctionne dans un environnement conforme aux prérequis.  
-> Si cela ne fonctionne pas chez vous, cela peut venir de votre configuration ou d'une erreur dans la documentation.
+> ⚠️ **Caution**  
+> Metrics Server is meant only for autoscaling purposes.  
+> For example, don’t use it to forward metrics to monitoring solutions, or as a source of monitoring solution metrics.  
+> In such cases, please collect metrics from Kubelet’s `/metrics/resource` endpoint directly.
+
 
