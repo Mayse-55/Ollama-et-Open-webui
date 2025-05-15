@@ -1,4 +1,4 @@
-## 📍​ Installation LLM : OLLAMA + Open-webui
+## 🖥️​ Installation LLM : OLLAMA + Open-webui
 
 ### 📦 Prérequis
 
@@ -7,7 +7,7 @@
 - Accès administrateur avec **sudo**  
 - Accès SSH au serveur via **OpenSSH** ou autre *(facultatif)*
 
-## Installation de Ollama
+## 📍​ Installation de Ollama
 
 **1 - Mettre à jour le système**
 ```bash
