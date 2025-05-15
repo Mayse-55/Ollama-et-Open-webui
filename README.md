@@ -72,7 +72,7 @@ sudo reboot
 
 ⚠️ Si vous voyez `WARNING: No NVIDIA/AMD GPU detected`, la carte graphique n’est pas détectée.
 
-### 9️⃣ Installer le moniteur GPU (nvtop)
+### 9️⃣ Installer le monitoring GPU (nvtop)
 
 ```bash
 sudo apt install nvtop && sudo nvtop
@@ -144,7 +144,7 @@ Depuis un navigateur :
 http://<IP-DU-SERVEUR>:3000
 ```
 
-Lancer également :
+Lancer également le monitoring GPU :
 
 ```bash
 sudo nvtop
