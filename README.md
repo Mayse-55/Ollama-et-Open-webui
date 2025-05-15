@@ -1,4 +1,4 @@
-## Installation LLM : OLLAMA + Open-webui
+## 📍​ Installation LLM : OLLAMA + Open-webui
 
 ### 📦 Prérequis
 
@@ -81,7 +81,7 @@ sudo ollama run mistral
 
 -------------------------------------------------------------
 
-## **Installation de Open-webui :**
+## 📍​ Installation de Open-webui :
 
 **1 - Mettre a jour les dépôt**
 ```bash
@@ -141,7 +141,7 @@ sudo nvtop
 
 -------------------------------------------------------------
 
-# Mises à jour
+# 🔄​ Mises à jour
 
 ![Capture d'écran 2025-05-13 232726](https://github.com/user-attachments/assets/067a8b69-225c-438f-bac7-c0dff350ae2c)
 
