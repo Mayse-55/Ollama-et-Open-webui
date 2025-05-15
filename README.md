@@ -186,5 +186,4 @@ sudo docker run -d -p 3000:8080 \
 
 > [!warning]
 > * **Cette documentation a été soigneusement testée et validée dans un environnement conforme aux prérequis.**
-
 > * **Si vous rencontrez des problèmes, il est probable que cela provienne de votre configuration locale plutôt que de la documentation elle-même.**
