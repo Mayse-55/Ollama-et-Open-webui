@@ -185,6 +185,7 @@ sudo docker run -d -p 3000:8080 \
 ---
 
 > [!warning]
-> Metrics Server is meant only for autoscaling purposes. For example, don't use it to forward metrics to monitoring solutions, or as a source of monitoring solution metrics. In such cases please collect metrics from Kubelet `/metrics/resource` endpoint directly.
+> ⚠️ **Ce script ne doit pas être exécuté automatiquement au démarrage.**
+> Il est écrit en **Bash** et doit être lancé manuellement avec les **droits administrateur** requis.
 
 
