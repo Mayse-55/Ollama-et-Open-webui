@@ -1,13 +1,11 @@
-## **Installation LLM : OLLAMA + Open-webui**
+## Installation LLM : OLLAMA + Open-webui
 
-**📄​ - Guide d'installation complet :**
+### 📦 Prérequis
 
-**​📦 - Préqueris :**
-
-- Distribution Debian ou Ubuntu à jour 
-- Carte graphique NVIDIA + pilotes propriétaires déjà installés 
-- Accès administrateur (sudo) 
-- Accès SSH au serveur via openssh ou autre « facultatif »
+- Distribution **Debian** ou **Ubuntu** à jour  
+- Carte graphique **NVIDIA** avec pilotes propriétaires déjà installés  
+- Accès administrateur avec **sudo**  
+- Accès SSH au serveur via **OpenSSH** ou autre *(facultatif)*
 
 ## Installation de Ollama
 
