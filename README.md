@@ -5,7 +5,7 @@
 * Système à jour : **Debian** ou **Ubuntu**
 * Carte graphique **NVIDIA** avec pilotes propriétaires installés
 * Accès administrateur (**sudo**)
-* Accès SSH au serveur via **(OpenSSH, ...)** *(optionnel)*
+* Accès SSH au serveur via **OpenSSH** *(optionnel)*
 
 > [!caution]
 > ✅ Cette documentation a été **testée et validée** dans un environnement conforme aux prérequis.  
