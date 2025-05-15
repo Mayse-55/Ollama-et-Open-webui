@@ -144,7 +144,7 @@ Depuis un navigateur :
 http://<IP-DU-SERVEUR>:3000
 ```
 
-Lancer également le moniteur GPU dans la console du serveur :
+Exécuter également le moniteur GPU dans la console du serveur :
 
 ```bash
 sudo nvtop
