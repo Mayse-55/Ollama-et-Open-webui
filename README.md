@@ -9,6 +9,8 @@
 - Accès administrateur (sudo) 
 - Accès SSH au serveur via openssh ou autre « facultatif »
 
+## **Installation de Ollama
+
 **1 - Mettre à jour le système**
 ```bash
 sudo apt update 
@@ -81,7 +83,7 @@ sudo ollama run mistral
 
 -------------------------------------------------------------
 
-## **Deuxième parti installation d’Open-webui :**
+## **Installation de Open-webui :**
 
 **1 - Mettre a jour les dépôt**
 ```bash
