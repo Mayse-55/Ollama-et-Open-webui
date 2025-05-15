@@ -185,7 +185,7 @@ sudo docker run -d -p 3000:8080 \
 ---
 
 > [!warning]
-> ⚠️ **Ce script ne doit pas être exécuté automatiquement au démarrage.**
-> Il est écrit en **Bash** et doit être lancé manuellement avec les **droits administrateur** requis.
+> Cette documentation a été testée et fonctionne dans un environnement conforme aux prérequis.  
+> Si cela ne fonctionne pas chez vous, cela peut venir de votre configuration ou d'une erreur dans la documentation.
 
 
