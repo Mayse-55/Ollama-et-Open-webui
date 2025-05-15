@@ -7,6 +7,9 @@
 * Accès administrateur (**sudo**)
 * Accès SSH au serveur via **OpenSSH** *(optionnel)*
 
+> [!caution]
+> ✅ Cette documentation a été soigneusement **testée et validée** dans un environnement conforme aux prérequis.  
+> 🚫 Si vous rencontrez des **problèmes**, il est probable que cela provienne **de votre configuration**.
 ---
 
 ## ⚙️ Installation de Ollama
@@ -182,8 +185,3 @@ sudo docker run -d -p 3000:8080 \
   --restart always \
   ghcr.io/open-webui/open-webui:cuda
 ```
----
-
-> [!warning]
-> ✅ Cette documentation a été soigneusement **testée et validée** dans un environnement conforme aux prérequis.  
-> 🚫 Si vous rencontrez des **problèmes**, il est probable que cela provienne **de votre configuration**.
