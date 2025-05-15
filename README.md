@@ -8,7 +8,7 @@
 * Accès SSH au serveur via **OpenSSH** *(optionnel)*
 
 > [!caution]
-> ✅ Cette documentation a été soigneusement **testée et validée** dans un environnement conforme aux prérequis.  
+> ✅ Cette documentation a été **testée et validée** dans un environnement conforme aux prérequis.  
 > 🚫 Si vous rencontrez des **problèmes**, il est probable que cela provienne **de votre configuration**.
 ---
 
