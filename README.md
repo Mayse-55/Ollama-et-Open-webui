@@ -184,7 +184,7 @@ sudo docker run -d -p 3000:8080 \
 ```
 ---
 
-:::caution Attention
-Cette documentation a été testée et fonctionne dans un environnement conforme aux prérequis.  
-Si cela ne fonctionne pas chez vous, cela peut venir de votre configuration ou d'une erreur dans la documentation.
-:::
+> ⚠️ **Attention**  
+> Cette documentation a été testée et fonctionne dans un environnement conforme aux prérequis.  
+> Si cela ne fonctionne pas chez vous, cela peut venir de votre configuration ou d'une erreur dans la documentation.
+
