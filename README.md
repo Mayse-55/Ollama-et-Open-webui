@@ -1,97 +1,107 @@
-## 🖥️​ Installation LLM : OLLAMA + Open-webui
+# 🧠 Installation LLM : OLLAMA + Open-WebUI
 
-### 📦 Prérequis
+## 📦 Prérequis
 
-- Distribution **Debian** ou **Ubuntu** à jour  
-- Carte graphique **NVIDIA** avec pilotes propriétaires déjà installés  
-- Accès administrateur avec **sudo**  
-- Accès SSH au serveur via **OpenSSH** ou autre *(facultatif)*
+* Système à jour : **Debian** ou **Ubuntu**
+* Carte graphique **NVIDIA** avec pilotes propriétaires installés
+* Accès administrateur (**sudo**)
+* Accès SSH au serveur via **OpenSSH** *(optionnel)*
 
-## 📍​ Installation de Ollama
+---
 
-**1 - Mettre à jour le système**
+## ⚙️ Installation de Ollama
+
+### 1️⃣ Mettre à jour le système
+
 ```bash
-sudo apt update 
+sudo apt update && sudo apt dist-upgrade -y
 ```
-```bash 
-sudo apt dist-upgrade -y 
-```
-**2 - Installer les outils de base**
+
+### 2️⃣ Installer les outils de base
+
 ```bash
-sudo apt install -y curl gpg ; apt update
+sudo apt install -y curl gpg && sudo apt update
 ```
-**3 - Ajouter le dépôt NVIDIA Container Toolkit**
+
+### 3️⃣ Ajouter le dépôt NVIDIA Container Toolkit
+
 ```bash
-sudo curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+sudo curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | \
+  sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg && \
+  curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+  sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+  sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```
-**4 - Ajouter la source logicielle**
+
+### 4️⃣ Décommenter la ligne "experimental" (si présente)
+
 ```bash
 sudo sed -i -e '/experimental/ s/^#//g' /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```
-**5 - Mettre a jour les dépôt**
-```bash
-sudo apt update 
-```
-**6 - Corriger les dépôts APT en double**
 
-**⚠️ Attention il se peut qu'au début, lors de l'ajout des dépôts NVIDIA, vous ayez en fesant** ```apt update``` **ces avertissements :** ```W: La cible Translations ...```
+### 5️⃣ Mettre à jour les dépôts
 
-![Capture d'écran 2025-05-14 081324](https://github.com/user-attachments/assets/6ce65a9a-12b6-4481-9f1b-2729891c0479)
-**a - Supprimez le fichier en double.** 
-```bash
-sudo rm /etc/apt/sources.list.d/contrib.list
-```
-**b - Vérifiez si les avertissements sont toujours présents.**
-```bash
-apt update
-```
-
-**📌 Si vous n'avez plus d'avertissements, le problème est résolu.**
-
-**7 - Installer NVIDIA Container toolkit**
-```bash
-sudo apt-get install -y nvidia-container-toolkit
-```
-**8 - Installer OLLAMA**
-```bash
-sudo curl -fsSL https://ollama.com/install.sh | sh
-```
-![Capture d'écran 2025-05-13 182238](https://github.com/user-attachments/assets/4b5092e7-d30b-4dcf-90ce-4f1a2c371886)
-```bash
-sudo reboot
-```
-**⚠️ Attention si a la fin il y a « WARNING: No NVIDIA/AMD GPU detected. Ollama will run in CPU-only mode. » la carte graphique n’est pas détecter**
-
-![Capture d'écran 2025-05-13 181942](https://github.com/user-attachments/assets/f5f502e7-9ab3-42c1-96ef-7e001a2611bc)
-
-**9 - Installer monitoring nvidia « nvtop »**
-```bash
-sudo apt install nvtop 
-```
-```bash
-sudo nvtop
-```
-**📌 Nvtop permet de visionner l’utilisation du GPU**
-
-**10 - Tester OLLAMA**
-```bash
-sudo ollama run mistral
-```
-![Capture d'écran 2025-05-13 181838](https://github.com/user-attachments/assets/56b60ba3-6aea-4342-88d8-db396e0fd454)
-
--------------------------------------------------------------
-
-## 📍​ Installation de Open-webui :
-
-**1 - Mettre a jour les dépôt**
 ```bash
 sudo apt update
 ```
-**2 - Installer docker docker-compose**
-```bash 
+
+### ⚠️ Supprimer les dépôts en double (si message d’erreur)
+
+```bash
+sudo rm /etc/apt/sources.list.d/contrib.list
+sudo apt update
+```
+
+### 6️⃣ Installer NVIDIA Container Toolkit
+
+```bash
+sudo apt install -y nvidia-container-toolkit
+```
+
+### 7️⃣ Installer Ollama
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+### 8️⃣ Redémarrer le serveur
+
+```bash
+sudo reboot
+```
+
+⚠️ Si vous voyez `WARNING: No NVIDIA/AMD GPU detected`, la carte n’est pas détectée.
+
+### 9️⃣ Installer le moniteur GPU (nvtop)
+
+```bash
+sudo apt install nvtop && sudo nvtop
+```
+
+### 🔟 Tester Ollama avec Mistral
+
+```bash
+ollama run mistral
+```
+
+---
+
+## 🌐 Installation de Open-WebUI
+
+### 1️⃣ Mise à jour des paquets
+
+```bash
+sudo apt update
+```
+
+### 2️⃣ Installer Docker et Docker Compose
+
+```bash
 sudo apt install docker docker-compose
 ```
-**3 - Installer Open-webui dans docker**
+
+### 3️⃣ Lancer Open-WebUI via Docker
+
 ```bash
 sudo docker run -d -p 3000:8080 \
   --gpus all \
@@ -101,62 +111,68 @@ sudo docker run -d -p 3000:8080 \
   --restart always \
   ghcr.io/open-webui/open-webui:cuda
 ```
-**⚠️ Attention ceci peut prendre beaucoup de temps**
 
-**4 - Configurer Systemd**
+⚠️ Cela peut prendre un certain temps
+
+### 4️⃣ Configurer systemd pour Ollama
+
 ```bash
 sudo nano /etc/systemd/system/ollama.service
 ```
-**Ajouter ceci et Enregistrer :**
-```bash
+
+Ajouter :
+
+```ini
+[Service]
 Environment="PATH=$PATH"
 Environment="OLLAMA_HOST=0.0.0.0"
 ```
-**5 - Lancer Ollama**
+
+### 5️⃣ Lancer Ollama avec systemd
+
 ```bash
-sudo systemctl deamon-reload
-```
-```bash
+sudo systemctl daemon-reexec
 sudo systemctl enable ollama.service
-```
-```bash
 sudo systemctl restart ollama.service
 ```
-**6 - Accéder a l’interface web open-webui + monitoring nvtop**
-```bash
-http://ip-serveur:3000
+
+### 6️⃣ Accéder à l'interface WebUI
+
+Depuis un navigateur :
+
+```
+http://<IP-DU-SERVEUR>:3000
 ```
 
-![Capture d'écran 2025-05-13 203520](https://github.com/user-attachments/assets/d2587bdb-47ac-4581-b1c5-dcf620340d5e)
+Lancer également :
 
-**Lancer nvtop sur le serveur :**
 ```bash
 sudo nvtop
 ```
-![Capture d'écran 2025-05-13 203645](https://github.com/user-attachments/assets/e28de005-f8d2-494e-921e-93bd68a61ccb)
 
-**7 - Pour ajouter des LLM sur open-webui**
+### 7️⃣ Ajouter des modèles dans Open-WebUI
 
-![demo](https://github.com/user-attachments/assets/b774f670-126f-4b1d-954d-a550e9b60d41)
+Utilisez l'interface Web pour ajouter vos modèles.
 
--------------------------------------------------------------
+---
 
-# 🔄​ Mises à jour
+## 🔄 Mise à jour d’Open-WebUI
 
-![Capture d'écran 2025-05-13 232726](https://github.com/user-attachments/assets/067a8b69-225c-438f-bac7-c0dff350ae2c)
+### 1️⃣ Stopper et supprimer l'ancien conteneur
 
-**1 - Arrêter et supprimer l’ancien conteneur (pas le volume)**
 ```bash
 sudo docker stop open-webui
-```
-```bash
 sudo docker rm open-webui
 ```
-**2 - Mettre à jour l’image**
+
+### 2️⃣ Mettre à jour l'image
+
 ```bash
 sudo docker pull ghcr.io/open-webui/open-webui:cuda
 ```
-**3 - Relancer avec la même commande**
+
+### 3️⃣ Relancer le conteneur
+
 ```bash
 sudo docker run -d -p 3000:8080 \
   --gpus all \
@@ -166,3 +182,7 @@ sudo docker run -d -p 3000:8080 \
   --restart always \
   ghcr.io/open-webui/open-webui:cuda
 ```
+
+---
+
+📁 **Ce guide est prêt à être utilisé comme README pour GitHub !**
