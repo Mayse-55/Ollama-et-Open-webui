@@ -1,4 +1,5 @@
 # 🧠 Installation LLM : OLLAMA + Open-WebUI
+[![Ollama](https://img.shields.io/badge/Ollama-LLM%20Runner-black?style=flat-square&logo=terminal&logoColor=white)](https://ollama.com/)
 
 ## 📦 Prérequis
 
